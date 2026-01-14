@@ -12,10 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tbkategori', function (Blueprint $table) {
-            $table->string('judul_post', 255);
-            $table->text('isi_post');
-            $table->date('tgl_post');
-            $table->integer('id_kategori');
+            $table->id('id_kategori');
+            $table->string('kategori');
             $table->timestamps();
         });
     }

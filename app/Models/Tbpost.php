@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tbpost extends Model
 {
-    protected $table = 'Tbpost';
+    protected $table = 'tbpost';
     protected $primaryKey = 'id_post';
     public $timestamps = false;
     protected $fillable = [
@@ -14,6 +14,7 @@ class Tbpost extends Model
         'isi_post',
         'tgl_post',
         'id_kategori',
+        'kategori',
         'status'
     ];
 }

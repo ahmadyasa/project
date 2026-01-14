@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('judul_post', 255);
             $table->text('isi_post');
             $table->date('tgl_post');
-            $table->integer('id_kategori');
+            $table->string('id_kategori');
+            $table->string('kategori');
             $table->string('status', 20);
             $table->timestamps();
         });

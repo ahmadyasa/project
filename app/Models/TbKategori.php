@@ -10,7 +10,6 @@ class TbKategori extends Model
     protected $primaryKey = 'id_kategori';
     public $timestamps = false;
     protected $fillable = [
-        'nama_kategori'
+        'kategori'
     ];
 }
-    

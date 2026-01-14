@@ -5,7 +5,7 @@
 
 <body>
     <h2>Edit Post</h2>
-    <form action="{{ url('/editpost/' . $post->id_post) }}" method="POST">
+    <form action="{{ url('/editpost/' . $post->id_post) }}" method="post">
         @csrf
         <div class="mb-3">
             <label>Judul Post</label>
@@ -17,13 +17,13 @@
         </div>
         <div class="mb-3">
             <label>Tanggal Post</label>
-            <input type="text" name="tgl_post" class="form-control" value="{{ $post->tgl_post }}" required>
+            <input type="date" name="tgl_post" class="form-control" value="{{ $post->tgl_post }}" required>
         </div>
         <div class="mb-3">
             <label>Kategori</label>
-            <select name="id_kategori" class="form-control" required>
+            <select name="kategori" class="form-control">
                 @foreach ($kategori as $k)
-                    <option value="{{ $k->id_kategori }}" @if ($k->id_kategori == $post->id_kategori) selected @endif>
+                    <option value="{{ $k->kategori }}" @if ($k->kategori == $post->kategori) selected @endif>
                         {{ $k->kategori }}
                     </option>
                 @endforeach

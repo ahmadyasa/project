@@ -20,15 +20,31 @@
         </div>
         <div>
             <label>Tanggal Post</label>
-            <input type="text" name="tgl_post" placeholder="2024-11-28" class="border p-2 w-full">
+            <input type="date" name="tgl_post" placeholder="2024-11-28" class="border p-2 w-full">
         </div>
         <div>
-            <label>ID Kategori</label>
-            <input type="number" name="id_kategori" class="border p-2 w-full">
+            <select name="id_kategori" required>
+                <option value="">-- Id_Kategori --</option>
+                @foreach ($kategori as $k)
+                    <option value="{{ $k->id_kategori }}">
+                        {{ $k->id_kategori }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+        <div>
+            <select name="kategori" required>
+                <option value="">-- Pilih Kategori --</option>
+                @foreach ($kategori as $k)
+                    <option value="{{ $k->kategori }}">
+                        {{ $k->kategori }}
+                    </option>
+                @endforeach
+            </select>
         </div>
         <div>
             <label>Status</label>
-            <input type="number" name="status" class="border p-2 w-full">
+            <input type="text" name="status" class="border p-2 w-full">
         </div>
         <button type="submit" class="bg-blue-500 text-white px-5 py-2rounded">
             Simpan Data
